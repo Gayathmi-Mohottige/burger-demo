@@ -39,7 +39,7 @@ export default function Hero() {
             transition={{ delay: 0.25, duration: 0.6 }}
             className="mt-6 max-w-md text-lg font-medium text-char/80"
           >
-            London&apos;s filthiest smash burger — griddled to order, no shortcuts,
+            London&apos;s filthiest smash burger - griddled to order, no shortcuts,
             no nonsense. Get messy.
           </motion.p>
 
