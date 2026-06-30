@@ -16,11 +16,11 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "GRIZZLE — London's Filthiest Smash Burgers",
+  title: "GRIZZLE - London's Filthiest Smash Burgers",
   description:
     "Smashed thin, stacked high. London's filthiest smash burger, griddled to order across the city. Order now or find your local.",
   openGraph: {
-    title: "GRIZZLE — London's Filthiest Smash Burgers",
+    title: "GRIZZLE - London's Filthiest Smash Burgers",
     description: "Smashed thin, stacked high. Griddled to order across London.",
     type: "website",
   },
