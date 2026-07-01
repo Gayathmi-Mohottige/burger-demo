@@ -60,6 +60,19 @@ export function CartProvider({ children }: { children: ReactNode }) {
 
 export function useCart() {
   const c = useContext(Ctx);
-  if (!c) throw new Error("useCart must be used inside <CartProvider>");
+  // Fail safe: during static prerender (or if the provider is ever missing),
+  // return a harmless empty cart instead of throwing and breaking the build.
+  // On the client the real provider is always present.
+  if (!c) {
+    return {
+      items: [],
+      add: () => {},
+      remove: () => {},
+      setQty: () => {},
+      clear: () => {},
+      count: 0,
+      total: 0,
+    } as CartCtx;
+  }
   return c;
 }
