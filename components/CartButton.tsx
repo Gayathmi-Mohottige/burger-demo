@@ -158,7 +158,7 @@ export default function CartButton() {
             <motion.aside
               initial={{ x: "100%" }} animate={{ x: 0 }} exit={{ x: "100%" }}
               transition={{ type: "spring", stiffness: 260, damping: 30 }}
-              className="fixed inset-y-0 right-0 z-50 flex w-full max-w-md flex-col border-l-[3px] border-char bg-cream"
+              className="fixed inset-y-0 right-0 z-50 flex w-full max-w-md flex-col overflow-hidden border-l-[3px] border-char bg-cream"
             >
               <div className="flex items-center justify-between border-b-[3px] border-char bg-char px-5 py-4 text-cream">
                 <p className="font-display text-2xl uppercase">
@@ -173,7 +173,7 @@ export default function CartButton() {
 
               {step === "bag" && (
                 <>
-                  <div className="flex-1 overflow-y-auto p-5">
+                  <div className="min-h-0 flex-1 overflow-y-auto p-5">
                     {items.length === 0 ? (
                       <div className="grid h-full place-items-center text-center">
                         <div>
@@ -221,8 +221,8 @@ export default function CartButton() {
               )}
 
               {step === "details" && (
-                <div className="flex flex-1 flex-col">
-                  <div className="flex-1 space-y-4 overflow-y-auto p-5">
+                <div className="flex min-h-0 flex-1 flex-col">
+                  <div className="min-h-0 flex-1 space-y-4 overflow-y-auto p-5">
                     <Field label="Your name">
                       <input required value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} className={inputCls} placeholder="Jamie Smith" />
                     </Field>
